@@ -14,11 +14,13 @@ services:
       - TZ=Europe/Helsinki
     volumes:
       - nodered-storage:/data
+      - bufr-storage:/bufr
     networks:
       - traefik-network
 
 volumes:
   nodered-storage:
+  bufr-storage:
 
 networks:
     traefik-network:
