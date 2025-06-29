@@ -9,7 +9,6 @@ services:
       - "traefik.http.routers.nodered.rule=Host(`nodered.${APPDOMAIN:-local}`)"
       - "traefik.http.services.nodered.loadbalancer.server.port=1880"
       - "traefik.http.routers.nodered.middlewares=auth"
-#      - "traefik.http.middlewares.auth.basicauth.users=mikkorauhala:$$apr1$$Yj9Ud8Dc$$6KeZVZktED3bfMnq2BnUA."
     environment:
       - TZ=Europe/Helsinki
     volumes:
